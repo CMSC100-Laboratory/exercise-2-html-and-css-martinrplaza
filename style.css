@@ -1,0 +1,78 @@
+:root {
+    --accent: #59afee;
+    --accent-hover: #449ad7;
+    --white-hover: #fafafa;
+    --button-border: #00000025;
+
+    --radius-card: 16px;
+
+}
+
+body{
+    display: flex;
+    width: 100vw;
+    flex-direction: column;
+    align-items: center;
+    /* padding: 64px; */
+
+    background: linear-gradient(180deg, #CBE4EF 0%, #F2F4F6 100%);
+    background: linear-gradient(180deg, color(display-p3 0.8157 0.8902 0.9333) 0%, color(display-p3 0.949 0.9569 0.9647) 100%);
+}
+
+#nav-bar{
+    position: sticky;
+    top: 32px;
+    z-index: 10; 
+
+    display: flex;
+    width: 75vw;
+    padding: 8px;
+    margin-bottom:32px;
+    justify-content: space-between;
+    align-items: flex-start;
+    align-content: flex-start;
+    row-gap: 8px;
+    align-self: stretch;
+    flex-wrap: wrap;
+
+    border-radius: 50px;
+    background: var(--Yellow, #FFC000);
+    background: var(--Yellow, color(display-p3 1 0.7765 0.3333));
+}
+
+.card-group{
+    display: flex;
+    /* width: 75vw; */
+    align-items: flex-start;
+    align-content: flex-start;
+    gap: 8px;
+    align-self: stretch;
+    flex-wrap: wrap;
+    margin-bottom: 16px;
+}
+
+.card{
+    display: flex;
+    min-width: fit-content;
+    height: 50vw;
+    padding: 8px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex: 1 0 0;
+
+    border-radius: var(--radius-card);
+    background: rgb(255, 0, 230) 50%;
+    transition: transform 0.3s ease;
+}
+
+.card .feat-photo{
+    width: 500px;
+}
+
+.card:hover{
+    background: blue 50%;
+    transform: scale(1.025);    
+}
+
+
