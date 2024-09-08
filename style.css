@@ -1,15 +1,28 @@
 :root {
     --yellow: #ffbb00;
     --yellow2: #ffc146;
+
+    --test: #1e96ca;
     
     --accent: #bfe5f5;
     --accent2: #eaf2f9;
     
-    --white-transparent: #ffffff25;
-    --black-transparent: #00000025;
+    --white-hover: #ffffff25;
+    --black-hover: #00000015;
+
+    --white-transparent: #ffffff6b;
+    --black-transparent: #0000006b;
+
+
+    --white: #ffffff;
+    --black: #000000;
 
     --radius-card: 16px;
     --max-radius: 28px;
+
+    --scale-large: 1.075;
+    --scale-medium: 1.025;
+    --scale-small: 1.01;
 }
 
 body{
@@ -18,9 +31,9 @@ body{
     min-height: 100vh;
     flex-direction: column;
     align-items: center;
-    margin: 0px;
+    margin: 0px 0px 32px 0px;
 
-    background: linear-gradient(180deg, var(--accent) 0%, var(--accent2) 75%, #ffffff 100%);
+    background: linear-gradient(180deg, var(--accent) 0%, var(--accent2) 75%, var(--white) 100%);
     font-family: system-ui; 
 }
 
@@ -28,6 +41,12 @@ a{
     line-height: 0em;
 }
 
+h1{
+    font-size: 2rem;
+}
+p{
+    font-size: 1.5rem;
+}
 nav{
     display: flex;
     position: sticky;
@@ -35,12 +54,12 @@ nav{
     max-width: 75vw;
     z-index: 10; 
     top: 32px;
-    margin-bottom: 32px;
+    margin: 0px 0px 64px 0px;
 
     padding: 4px;
     justify-content: space-between;
     flex-wrap: wrap;
-    gap: 16px 64px;
+    gap: 8px 64px;
     
     border-radius: var(--max-radius);
     background: var(--yellow);
@@ -51,10 +70,11 @@ nav{
 nav:hover{
     background-color: var(--yellow2);
     box-shadow: rgba(0, 0, 0, 0.25) 0px 25px 50px -12px;
-    transform: scale(1.03);    
+    transform: scale(var(--scale-medium));    
 }
 
 .nav-icon{
+    max-width: 172px;
     height: 32px;
 }
 
@@ -78,40 +98,68 @@ nav:hover{
     transition: background-color 0.3s ease;
 }
 
-.links > div:hover{
-    background-color: var(--black-transparent);
+.links{
+    transition: transform 0.5s ease background-color 0.3s ease;
 }
 
+.links:hover{
+    background-color: var(--black-hover);
+}
 
-/* .card-group{
+.links > div:hover{
+    background-color: var(--accent);
+    transform: scale(1.05);    
+}
+
+.card-group{
     display: flex;
-    width: 75vw;
-    align-items: flex-start;
-    align-content: flex-start;
+    min-width: 50vw;
+    width: 90vw;
+    justify-content: center;
+    align-items: stretch;
+    align-content: stretch;
     gap: 8px;
-    align-self: stretch;
     flex-wrap: wrap;
-    margin-bottom: 16px;
+    margin: 0px 0px 32px 0px;
+
 }
 
 .card{
     display: flex;
-    min-width: fit-content;
-    height: 50vw;
     padding: 8px;
+    min-width: 35dvw;
+    max-width: 90dvw;
+    /* max-height: 60dvh; */
+    justify-content: space-evenly;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
+    flex-wrap: wrap;
     flex: 1 0 0;
 
+    cursor: default;
     border-radius: var(--radius-card);
-    background: rgb(255, 0, 230) 50%;
-    transition: transform 0.3s ease;
+    background: var(--white-transparent);
+    transition: transform 0.5s ease, background-color 0.3s ease, box-shadow 1s ease;
+}
+
+.feat-photo{
+    min-width: 300px;
+    width: 60dvw;
+    height: 70dvh;
+    max-width: 90dvw;    
+    object-fit: cover;
+
 }
 
 .card:hover{
-    background: blue 50%;
-    transform: scale(1.025);    
-} */
+    background: var(--white);
+    transform: scale(var(--scale-small));    
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+}
 
+.card > .card{
+    min-height: fit-content;
+    border-radius: 8px;
+    background: var(--white-transparent);
+}
 
