@@ -1,48 +1,96 @@
 :root {
-    --accent: #59afee;
+    --yellow: #ffbb00;
+    --yellow-hover: #ffc146;
+    
+    --accent: #44c1f7;
     --accent-hover: #449ad7;
-    --white-hover: #fafafa;
-    --button-border: #00000025;
+    
+    --white-transparent: #ffffff25;
+    --black-transparent: #00000025;
 
     --radius-card: 16px;
-
+    --max-radius: 28px;
 }
 
 body{
     display: flex;
     width: 100vw;
+    min-height: 100vh;
     flex-direction: column;
     align-items: center;
-    /* padding: 64px; */
+    margin: 0px;
 
-    background: linear-gradient(180deg, #CBE4EF 0%, #F2F4F6 100%);
-    background: linear-gradient(180deg, color(display-p3 0.8157 0.8902 0.9333) 0%, color(display-p3 0.949 0.9569 0.9647) 100%);
+    background: linear-gradient(180deg, #bfe5f5 0%, #eaf2f9 75%, #ffffff 100%);
+    font-family: system-ui; 
+
 }
 
-#nav-bar{
-    position: sticky;
-    top: 32px;
-    z-index: 10; 
+p {
+    line-height: 0.25em !important;
+    }
 
+nav{
+    display: flex;
+    position: sticky;
+    min-width: 50vw;
+    max-width: 75vw;
+    z-index: 10; 
+    top: 32px;
+    margin-bottom: 32px;
+    /* margin: 0px 32px 32px 32px; */
+
+    padding: 8px;
+    justify-content: space-between;
+    gap: 0px 32px;
+    /* align-items: flex-start; */
+    /* align-content: center; */
+    flex-wrap: wrap;
+    
+    border-radius: var(--max-radius);
+    background: var(--yellow);
+    transition: transform 0.5s ease, background-color 0.3s ease;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+}
+
+nav:hover{
+    background-color: var(--yellow-hover);
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 25px 50px -12px;
+    transform: scale(1.03);    
+}
+
+.nav-items{
+    display:flex;
+    flex-wrap: wrap;
+    
+    /* padding: 0px 16px 0px 16px; */
+    gap: 4px;
+
+    border-radius: var(--max-radius);
+    transition: background-color 0.3s ease;
+}
+
+.nav-items:hover{
+    background-color: var(--black-transparent);
+    cursor: default;
+}
+
+.nav-items > div{
+    padding: 0px 8px 0px 8px;
+
+    border-radius: var(--max-radius);
+    transition: background-color 0.3s ease;
+}
+
+.nav-items > div:hover{
+    background-color: var(--accent);
+    outline: 2px solid red;
+    cursor: default;
+}
+
+
+/* .card-group{
     display: flex;
     width: 75vw;
-    padding: 8px;
-    margin-bottom:32px;
-    justify-content: space-between;
-    align-items: flex-start;
-    align-content: flex-start;
-    row-gap: 8px;
-    align-self: stretch;
-    flex-wrap: wrap;
-
-    border-radius: 50px;
-    background: var(--Yellow, #FFC000);
-    background: var(--Yellow, color(display-p3 1 0.7765 0.3333));
-}
-
-.card-group{
-    display: flex;
-    /* width: 75vw; */
     align-items: flex-start;
     align-content: flex-start;
     gap: 8px;
@@ -66,13 +114,9 @@ body{
     transition: transform 0.3s ease;
 }
 
-.card .feat-photo{
-    width: 500px;
-}
-
 .card:hover{
     background: blue 50%;
     transform: scale(1.025);    
-}
+} */
 
 
