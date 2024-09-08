@@ -1,9 +1,9 @@
 :root {
     --yellow: #ffbb00;
-    --yellow-hover: #ffc146;
+    --yellow2: #ffc146;
     
-    --accent: #44c1f7;
-    --accent-hover: #449ad7;
+    --accent: #bfe5f5;
+    --accent2: #eaf2f9;
     
     --white-transparent: #ffffff25;
     --black-transparent: #00000025;
@@ -20,14 +20,13 @@ body{
     align-items: center;
     margin: 0px;
 
-    background: linear-gradient(180deg, #bfe5f5 0%, #eaf2f9 75%, #ffffff 100%);
+    background: linear-gradient(180deg, var(--accent) 0%, var(--accent2) 75%, #ffffff 100%);
     font-family: system-ui; 
-
 }
 
-p {
-    line-height: 0.25em !important;
-    }
+a{
+    line-height: 0em;
+}
 
 nav{
     display: flex;
@@ -37,14 +36,11 @@ nav{
     z-index: 10; 
     top: 32px;
     margin-bottom: 32px;
-    /* margin: 0px 32px 32px 32px; */
 
-    padding: 8px;
+    padding: 4px;
     justify-content: space-between;
-    gap: 0px 32px;
-    /* align-items: flex-start; */
-    /* align-content: center; */
     flex-wrap: wrap;
+    gap: 16px 64px;
     
     border-radius: var(--max-radius);
     background: var(--yellow);
@@ -53,38 +49,37 @@ nav{
 }
 
 nav:hover{
-    background-color: var(--yellow-hover);
+    background-color: var(--yellow2);
     box-shadow: rgba(0, 0, 0, 0.25) 0px 25px 50px -12px;
     transform: scale(1.03);    
+}
+
+.nav-icon{
+    height: 32px;
 }
 
 .nav-items{
     display:flex;
     flex-wrap: wrap;
-    
-    /* padding: 0px 16px 0px 16px; */
-    gap: 4px;
+    align-content: center;
+    gap: 2px;
 
     border-radius: var(--max-radius);
     transition: background-color 0.3s ease;
-}
-
-.nav-items:hover{
-    background-color: var(--black-transparent);
-    cursor: default;
 }
 
 .nav-items > div{
-    padding: 0px 8px 0px 8px;
+    display: flex;  
+    justify-content: center;
+    align-items: center;
+    padding: 8px;
 
     border-radius: var(--max-radius);
     transition: background-color 0.3s ease;
 }
 
-.nav-items > div:hover{
-    background-color: var(--accent);
-    outline: 2px solid red;
-    cursor: default;
+.links > div:hover{
+    background-color: var(--black-transparent);
 }
 
 
