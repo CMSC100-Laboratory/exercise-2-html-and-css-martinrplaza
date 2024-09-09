@@ -4,7 +4,7 @@
 
 #### **BS Computer Science**
 
-*cmsc100-laboratory.github.io/exercise-2-html-and-css-martinrplaza/*
+*<a href="cmsc100-laboratory.github.io/exercise-2-html-and-css-martinrplaza/">cmsc100-laboratory.github.io/exercise-2-html-and-css-martinrplaza/</a>*
 
 ##### To create this page using GitHub Pages:
 
