@@ -2,13 +2,9 @@
 
 # Martin Adrian Plaza
 
-## *BS Computer Science*
-
----
+#### **BS Computer Science**
 
 *cmsc100-laboratory.github.io/exercise-2-html-and-css-martinrplaza/*
-
----
 
 ##### To create this page using GitHub Pages:
 
