@@ -1,4 +1,4 @@
-![webpage-sc](C:\Users\marti\Downloads\webpage-sc.png)
+![webpage-sc](\assets\webpage-sc.png)
 
 # Martin Adrian Plaza
 
