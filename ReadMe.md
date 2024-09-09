@@ -1,4 +1,4 @@
-![webpage-sc](\assets\webpage-sc.png)
+![webpage-sc](/assets/webpage-sc.png)
 
 # Martin Adrian Plaza
 
